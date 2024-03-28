@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title>MC Programming team</title>
+        <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="mcLogo.png">
+    <style>
+        #idHeader {
+                color : #ff6600;
+                font-size: 40px;
+                font-weight: lighter;
+                font-family: fantasy, Arial, Helvetica, sans-serif;
+            }
+        #idWarning {
+            color : red;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: fantasy, Arial, Helvetica, sans-serif;
+        }
+        #idPassage {
+            color : #000080;
+            font-size: 20px;
+            font-weight: lighter;
+            font-family: fantasy, Arial, Helvetica, sans-serif;
+        }
+        #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:  #ff6600;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  
+}
+
+#myBtn:hover {
+  background-color: white;
+  color: #ff6600;
+}
+
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+            margin: 0; 
+            padding: 0;
+            border: solid #5B0F1B;
+            border-width: thin;
+            display:block;
+            box-sizing: border-box;
+            background-color: #e8e9f3
+            }
+            .side {
+                -ms-flex: 30%; /* IE10 */
+                flex: 30%;
+                background-color: #5B0F1B;
+                padding: 4px
+                }
+        .navbar {
+            overflow: hidden;
+            background-color: #ff6600
+;
+            
+            }
+        
+        .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;
+        padding: 4px 20px;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .navbar a:hover {
+        background-color: #5B0F1B;
+        color: #ff6600;
+        }
+
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 4px 20px;
+  font-size: 25px;
+  background-color: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff6600;
+  color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+    </style>
+
+    </head>
+    <body>
+        <form name = "MainPage" method="post">
+        <link rel="stylesheet" href="style.css">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top</button>
+        <div class = "side">
+            <pre>
+            <center><h1 id="idHeader"><img align="left" src="mcLogo.png">Maryville College's programming team<img align= "right" src="MCProgLogo.png"></h1></center>
+        </pre>
+        </div>
+        
+        <div class= "navbar">
+            <div class="dropdown">
+                <button class="dropbtn">PROBLEMS<i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="problems.php">VIEW PROBLEMS</a>
+                  <a href="categories.php">EDIT CATEGORIES</a>
+                  <a href="probedit.php">EDIT PROBLEMS</a>
+                </div>
+            </div>
+            <a href="https://www.maryvillecollege.edu/academics/programs-of-study/computer-science/" target="_blank">LEARN ABOUT CS</a>
+            <a href = "https://open.kattis.com/problems/secretsanta" target="_blank">PROBLEM OF THE WEEK</a>
+            <a href = "https://www.facebook.com/groups/112478608462745" target="_blank">OUR FACEBOOK</a>
+        </div>
+
+        <noscript>
+            <center><h1 id="idWarning">JAVASCRIPT IS REQUIRED FOR THIS PAGE. PLEASE TURN IT ON TO ACCESS THE PROBLEM DATABASE.</h1></center>
+        </noscript>
+        <section>
+        <div class="hero-container" loading="lazy">
+            <div class="environment"></div>
+            <h2 class="hero glitch layers" data-text="WELCOME TO THE FUTURE OF CODE"><span>WELCOME TO THE FUTURE OF CODE</span></h2>
+          </div>
+        </section>
+
+        <script>
+
+            var images = ["CSC.jpg", "blastfrompast.jpg","2ndplace.jpg","10thplace.jpg", "freshies.jpg"];
+            var i = 0;
+            var renew = setInterval(function(){
+                if(images.length == i){
+                    i = 0;
+                }
+                else {
+                document.getElementById("bannerImage").src = images[i]; 
+                i++;
+    
+            }
+            },5000);
+
+            let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+            </script>
+    
+    <br>
+    <center>
+    <pre>
+        <h2 id="idHeader">ABOUT US:</h2>
+        <p id="idPassage">Welcome to Maryville College's programming team! Founded in 2002, our team has established itself as a dynamic force in the world of 
+            programming contests across the nation. With a passion for problem-solving and a dedication to excellence, we continuously strive to push the
+            boundaries of our abilities and the coding world. Through weekly rigorous training, collaborative efforts, and staying up-to-date on all 
+            things tech, we equip our members with the skills necessary to succeed in the ever-evolving field of programming. 
+            Join the revolution of code and help us nurture talent, foster innovation, and make a name for ourselves in the competitive world of programming.</p>
+
+
+        <h2 id="idHeader">MEET OUR TEAM:</h2>
+        <img id="bannerImage" src="CSC.jpg" width="65%" height="auto" alt="some text" loading="lazy">
+        <p id="idPassage">Want to join the future? Contact us:</p>
+<a id="idPassage" href = "mailto: barbara.johnson@maryvillecollege.edu">barbara.johnson@maryvillecollege.edu</a>
+<a id="idPassage" href = "mailto: chance.loveday@my.maryvillecollege.edu">chance.loveday@my.maryvillecollege.edu</a>
+<a id="idPassage" href = "mailto:kylind.reagan@my.maryvillecollege.edu">kylind.reagan@my.maryvillecollege.edu</a>
+    </pre>
+</center>
+
+    </body>
+</form>
+<center><p >502 E Lamar Alexander Pkwy, Maryville, TN 37804</p></center>
+</html>
